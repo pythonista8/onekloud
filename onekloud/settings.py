@@ -29,7 +29,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = [
-    'onekloud.com'
+    'www.onekloud.com'
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
