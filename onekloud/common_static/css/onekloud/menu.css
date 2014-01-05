@@ -3,6 +3,14 @@
  * --------------------------
 */
 
-#menu ul {
+#menu .pure-menu ul {
     height: auto;
+}
+
+#menu .pure-menu .menu-item-divided {
+    border-left: 1px solid #333;
+}
+
+#menu .pure-button {
+    margin-left: 1.5em;
 }
