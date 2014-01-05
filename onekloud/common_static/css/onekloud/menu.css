@@ -3,6 +3,6 @@
  * --------------------------
 */
 
-#menu {
-    overflow: hidden; /* instead of clearfix */
+#menu ul {
+    height: auto;
 }

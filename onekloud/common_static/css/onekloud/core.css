@@ -56,6 +56,20 @@ h3, h4, h5, h6 {
     float: right;
 }
 
+.clearfix:before,
+.clearfix:after {
+    content: ' ';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /* IE 6/7 */
+}
+
 /* Layout */
 
 .wrap {
@@ -86,11 +100,46 @@ h3, h4, h5, h6 {
 /* Showcase */
 
 #showcase {
+    color: #fff;
     padding: 3em 0;
+    text-align: center;
+    background: #202021 url('../../img/onekloud/showcase_bg.png') repeat;
+}
+
+#showcase .heading {
+    font-size: 4em;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0 0 .3em;
+    letter-spacing: -1px;
+    -webkit-font-smoothing: antialiased;
+}
+
+#showcase .subheading {
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 0 0 2em;
 }
 
 /* Pure */
 
 .l-box {
     padding: 1em;
+}
+
+
+/* Footer */
+
+#footer {
+    font-size: 75%;
+    max-width: 1000px;
+    background: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#copyright {
+    text-align: right;
+    padding: 5px 20px;
 }
