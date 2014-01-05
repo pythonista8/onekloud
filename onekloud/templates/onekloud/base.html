@@ -12,6 +12,12 @@
     {# Inherited meta information is included inside `meta` block. #}
     {% block meta %}{% endblock %}
 
+    {% if title %}
+        <title>{{ title }} · Onekloud</title>
+    {% else %}
+        <title>Onekloud · Close deals with lightning speed.</title>
+    {% endif %}
+
     <link href="{% static 'img/onekloud/favicon.ico' %}" rel="shortcut icon">
 
     {# Vendor CSS files. #}
