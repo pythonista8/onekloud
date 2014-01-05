@@ -1,0 +1,25 @@
+/* Showcase */
+
+#showcase {
+    color: #fff;
+    padding: 3em 0;
+    margin-bottom: 2em;
+    text-align: center;
+    background: #202021 url('../img/onekloud/showcase_bg.png') repeat;
+}
+
+#showcase .heading {
+    color: #12c8e8;
+    font-size: 4em;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0 0 .3em;
+    letter-spacing: -1px;
+    -webkit-font-smoothing: antialiased;
+}
+
+#showcase .subheading {
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 0 0 2em;
+}

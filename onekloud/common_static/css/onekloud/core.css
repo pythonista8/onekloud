@@ -36,6 +36,10 @@ h3, h4, h5, h6 {
     color: #ee5f5b;
 }
 
+.center {
+    text-align: center;
+}
+
 .nomargin {
     margin: 0;
 }
@@ -87,6 +91,12 @@ h3, h4, h5, h6 {
     font-size: 1.125em;
 }
 
+#content .heading {
+    font-size: 3.5em;
+    font-weight: normal;
+    text-indent: -1px;
+}
+
 /* Header */
 
 #header {
@@ -95,30 +105,7 @@ h3, h4, h5, h6 {
 
 #logo {
     padding-top: .2em;
-}
-
-/* Showcase */
-
-#showcase {
-    color: #fff;
-    padding: 3em 0;
-    text-align: center;
-    background: #202021 url('../../img/onekloud/showcase_bg.png') repeat;
-}
-
-#showcase .heading {
-    font-size: 4em;
-    font-weight: normal;
-    line-height: 1;
-    margin: 0 0 .3em;
-    letter-spacing: -1px;
-    -webkit-font-smoothing: antialiased;
-}
-
-#showcase .subheading {
-    font-size: 1.5em;
-    line-height: 1;
-    margin: 0 0 2em;
+    padding-bottom: 0;
 }
 
 /* Pure */
@@ -127,12 +114,15 @@ h3, h4, h5, h6 {
     padding: 1em;
 }
 
-
 /* Footer */
 
 #footer {
-    font-size: 75%;
+    width: 100%;
     max-width: 1000px;
+}
+
+#footer .container {
+    font-size: 75%;
     background: #f9f9f9;
     border-top: 1px solid #e5e5e5;
     padding-top: 1em;

@@ -74,17 +74,7 @@
         </div>
     </header>
 
-    <div id="showcase" class="pure-g-r">
-        <div class="pure-u-1">
-            <div class="wrap l-box">
-                <h1 class="heading">Onekloud CRM</h1>
-                <p class="subheading">Close deals with lightning speed.</p>
-                <a href="#" class="pure-button pure-button-xlarge pure-button-primary">
-                    Learn more
-                </a>
-            </div>
-        </div>
-    </div>
+    {% block showcase %}{% endblock %}
 
     <div class="pure-g-r">
         <div id="content" class="wrap pure-u-1">
@@ -92,8 +82,9 @@
             {# Inherited content is included inside `content` block. #}
             {% block content %}{% endblock %}
 
-            {% include 'onekloud/footer.html' %}
         </div>
+
+        {% include 'onekloud/footer.html' %}
     </div>
 </body>
 </html>

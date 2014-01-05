@@ -1,4 +1,28 @@
 {% extends 'onekloud/base.html' %}
 
+{% load static %}
+
+{% block css %}
+<link href="{% static 'home/onekloud/css/home.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block showcase %}
+<div id="showcase" class="pure-g-r">
+    <div class="pure-u-1">
+        <div class="wrap l-box">
+            <h1 class="heading">Onekloud CRM</h1>
+            <p class="subheading">Close deals with lightning speed.</p>
+            <a href="#" class="pure-button pure-button-xlarge pure-button-primary">
+                Learn more
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
+<h1 class="heading center">Welcome.</h1>
+<p>
+    blah blah blah
+</p>
 {% endblock %}
