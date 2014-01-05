@@ -3,9 +3,9 @@
 #showcase {
     color: #fff;
     padding: 3em 0;
-    margin-bottom: 2em;
-    text-align: center;
     background: #202021 url('../img/onekloud/showcase_bg.png') repeat;
+    margin-bottom: 3em;
+    text-align: center;
 }
 
 #showcase .heading {
