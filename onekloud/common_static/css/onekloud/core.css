@@ -1,0 +1,96 @@
+body {
+    background: #f9f9f9;
+}
+
+a {
+    color: #009cdd;
+    text-decoration: none;
+}
+
+aside {
+    background: #1f8dd6;
+    padding: 0.3em 1em;
+    border-radius: 3px;
+    color: #fff;
+}
+
+/* Typography */
+
+h2 {
+    margin: .3em 0 .5em;
+}
+
+h3, h4, h5, h6 {
+    padding-bottom: .4em;
+    color: #333;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Helper classes */
+
+.gray {
+    color: #959595;
+}
+
+.red {
+    color: #ee5f5b;
+}
+
+.nomargin {
+    margin: 0;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.noborder {
+    border: none;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+/* Layout */
+
+.wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#content {
+    margin-bottom: 50px;
+    padding: 1em 2em 3em;
+}
+
+#content p {
+    line-height: 1.6em;
+    font-size: 1.125em;
+}
+
+/* Header */
+
+#header {
+    padding: 1.2em 0;
+}
+
+#logo {
+    padding-top: .2em;
+}
+
+/* Showcase */
+
+#showcase {
+    padding: 3em 0;
+}
+
+/* Pure */
+
+.l-box {
+    padding: 1em;
+}

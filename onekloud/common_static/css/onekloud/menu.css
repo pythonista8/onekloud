@@ -1,0 +1,8 @@
+/* --------------------------
+ * Main Navigation Bar Styles
+ * --------------------------
+*/
+
+#menu {
+    overflow: hidden; /* instead of clearfix */
+}

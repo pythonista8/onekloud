@@ -1,9 +1,10 @@
-from django.conf.urls import patterns, include
+from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    (r'^admin/', include(admin.site.urls)),
+    url(r'^', include('apps.home.urls', namespace='home')),
+    url(r'^admin/', include(admin.site.urls)),
 )

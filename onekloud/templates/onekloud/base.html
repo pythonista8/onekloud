@@ -5,6 +5,7 @@
 <head>
     {# Meta information #}
     <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width">
 
     {# Inherited meta information is included inside `meta` block. #}
@@ -14,8 +15,13 @@
 
     {# Vendor CSS files. #}
     <link href="{% static 'css/vendor/font_awesome/css/font-awesome.css' %}" rel="stylesheet">
-    <link href="{% static 'css/vendor/jquery/jquery-ui-1.10.3.css' %}" rel="stylesheet">
     {% include 'vendor/purecss.html' %}
+
+    {# OneKloud CSS files. #}
+    <link href="{% static 'css/onekloud/core.css' %}" rel="stylesheet">
+    <link href="{% static 'css/onekloud/menu.css' %}" rel="stylesheet">
+    <link href="{% static 'css/onekloud/buttons.css' %}" rel="stylesheet">
+    <link href="{% static 'css/onekloud/forms.css' %}" rel="stylesheet">
 
     {# Inherited CSS files are included inside `css` block. #}
     {% block css %}{% endblock %}
@@ -24,8 +30,57 @@
     {% block head %}{% endblock %}
 </head>
 
-<body id="onekloud">
-    {# Inherited JavaScript files are included inside `js` block. #}
-    {% block js %}{% endblock %}
+<body>
+    <header id="header">
+        <div class="wrap">
+            <div class="pure-g-r">
+                <div class="pure-u-1-5">
+                    <div id="logo">
+                        <a href="/">
+                            <img src="{% static 'img/onekloud/logo.png' %}" alt="Onekloud">
+                        </a>
+                    </div>
+                </div>
+                <div class="pure-u-4-5">
+                    <div id="menu" class="pure-menu pure-menu-open pure-menu-horizontal">
+                        <ul class="pull-right">
+                            <li class="pure-menu-selected">
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="/">Features</a>
+                            </li>
+                            <li>
+                                <a href="/">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="/">Documentation</a>
+                            </li>
+                            <li>
+                                <a href="/">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="showcase" class="pure-g-r">
+        <div class="pure-u-1">
+            <div class="wrap">
+                <h1>Welcome!</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-g-r">
+        <div id="content" class="wrap pure-u-1">
+
+            {# Inherited content is included inside `content` block. #}
+            {% block content %}{% endblock %}
+
+        </div>
+    </div>
 </body>
 </html>
