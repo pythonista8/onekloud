@@ -1,0 +1,31 @@
+<!doctype html>
+{% load static %}
+
+<html lang="en">
+<head>
+    {# Meta information #}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    {# Inherited meta information is included inside `meta` block. #}
+    {% block meta %}{% endblock %}
+
+    <link href="{% static 'img/onekloud/favicon.ico' %}" rel="shortcut icon">
+
+    {# Vendor CSS files. #}
+    <link href="{% static 'css/vendor/font_awesome/css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'css/vendor/jquery/jquery-ui-1.10.3.css' %}" rel="stylesheet">
+    {% include 'vendor/purecss.html' %}
+
+    {# Inherited CSS files are included inside `css` block. #}
+    {% block css %}{% endblock %}
+
+    {# Extra files, such as old IE versions support. #}
+    {% block head %}{% endblock %}
+</head>
+
+<body id="onekloud">
+    {# Inherited JavaScript files are included inside `js` block. #}
+    {% block js %}{% endblock %}
+</body>
+</html>
