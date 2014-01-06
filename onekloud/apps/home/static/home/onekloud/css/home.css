@@ -42,5 +42,6 @@
     font-size: 1.95em;
     font-weight: normal;
     letter-spacing: -1px;
+    margin-bottom: 0;
     -webkit-font-smoothing: antialiased;
 }
