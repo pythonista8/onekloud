@@ -23,3 +23,13 @@
     line-height: 1;
     margin: 0 0 2em;
 }
+
+/* Marketing section */
+
+#marketing-section p {
+    font-size: .9em;
+}
+
+#marketing-section .l-box {
+    padding: 2em;
+}
