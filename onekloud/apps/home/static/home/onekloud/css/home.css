@@ -33,3 +33,14 @@
 #marketing-section .l-box {
     padding: 2em;
 }
+
+#marketing-section .icon {
+    font-size: 4em;
+}
+
+#marketing-section .heading {
+    font-size: 1.95em;
+    font-weight: normal;
+    letter-spacing: -1px;
+    -webkit-font-smoothing: antialiased;
+}
