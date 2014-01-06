@@ -14,6 +14,11 @@ aside {
     color: #fff;
 }
 
+::selection,
+::-moz-selection {
+    background-color: #d5eafc;
+}
+
 /* Typography */
 
 h2 {
@@ -89,14 +94,14 @@ h3, h4, h5, h6 {
 }
 
 #content .heading {
-    font-size: 2.4em;
+    font-size: 2em;
     font-weight: normal;
     letter-spacing: -1px;
     -webkit-font-smoothing: antialiased;
 }
 
 #content .icon {
-    font-size: 5em;
+    font-size: 4em;
 }
 
 /* Header */
