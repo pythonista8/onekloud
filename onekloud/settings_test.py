@@ -3,6 +3,8 @@
 import os
 BASE_DIR = os.path.dirname(__file__)
 
+USE_TZ = False
+
 
 DATABASES = {
     'default': {
@@ -24,5 +26,3 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
-
-USE_TZ = False
