@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(__file__)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'test.db'),
+        'NAME': os.path.join(BASE_DIR, 'test_onekloud.db'),
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
