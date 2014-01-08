@@ -5,7 +5,6 @@ BASE_DIR = os.path.dirname(__file__)
 
 USE_TZ = False
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -16,7 +15,6 @@ DATABASES = {
         'PORT': ''
     }
 }
-
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
