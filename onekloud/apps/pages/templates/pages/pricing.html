@@ -1,0 +1,33 @@
+{% extends 'onekloud/base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link href="{% static 'pages/onekloud/css/pricing.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="pure-g-r">
+    <div class="pure-u-1">
+        <div class="l-box">
+            <h1>Pricing</h1>
+            <p>
+                Try Onekloud CRM for 30 days for free. Discover the convenient
+                way to manage your customers.
+            </p>
+
+            <dl>
+                <dt>
+                    <span class="icon">
+                        <i class="fa fa-check-circle"></i>
+                    </span>
+                    Unlimited customers
+                </dt>
+                <dd>
+                    blah blah blah.
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+{% endblock %}

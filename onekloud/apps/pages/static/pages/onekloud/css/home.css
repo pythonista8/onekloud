@@ -45,3 +45,9 @@
     margin-bottom: 0;
     -webkit-font-smoothing: antialiased;
 }
+
+/* Content */
+
+#content {
+    text-align: center;
+}

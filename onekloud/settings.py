@@ -54,7 +54,7 @@ INSTALLED_APPS += (
 # Onekloud application definition
 INSTALLED_APPS += (
     'onekloud.apps.accounts',
-    'onekloud.apps.home',
+    'onekloud.apps.pages',
 )
 
 
