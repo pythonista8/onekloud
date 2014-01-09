@@ -3,4 +3,4 @@ SHELL := /bin/sh
 .PHONY: deploy
 
 deploy:
-	bash -ex /var/www/onekloud/deploy.sh
+	bash -l -c "cd /var/www/onekloud; source ../env/bin/activate; ./deploy.sh"
