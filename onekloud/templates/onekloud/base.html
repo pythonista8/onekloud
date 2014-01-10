@@ -5,17 +5,18 @@
 <head>
     {# Meta information #}
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Close deals with lightning speed.">
+    <meta name="description" content="Simplify your management.">
 
-    {# Inherited meta information is included inside `meta` block. #}
+    {# Inherited meta information is included in `meta` block. #}
     {% block meta %}{% endblock %}
 
     {% if title %}
         <title>{{ title }} · Onekloud</title>
     {% else %}
-        <title>Onekloud · Close deals with lightning speed.</title>
+        <title>Onekloud · Simplify your management.</title>
     {% endif %}
 
     <link href="{% static 'img/onekloud/favicon.ico' %}" rel="shortcut icon">
@@ -30,7 +31,7 @@
     <link href="{% static 'css/onekloud/buttons.css' %}" rel="stylesheet">
     <link href="{% static 'css/onekloud/forms.css' %}" rel="stylesheet">
 
-    {# Inherited CSS files are included inside `css` block. #}
+    {# Inherited CSS files are included in `css` block. #}
     {% block css %}{% endblock %}
 
     {# Extra files, such as old IE versions support. #}

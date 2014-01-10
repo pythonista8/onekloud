@@ -1,8 +1,9 @@
 /* Pricing section */
 
 #pricing-section {
-    margin: 1.5em 0 2em;
+    width: 75%;
     border-bottom: 1px solid #e2e7ec;
+    margin: 1.5em auto 2em;
     padding-bottom: 2.8em;
 }
 
