@@ -1,5 +1,11 @@
 /* Pricing section */
 
+#pricing-section {
+    margin: 1.5em 0 2em;
+    border-bottom: 1px solid #e2e7ec;
+    padding-bottom: 2.8em;
+}
+
 .pricing-box {
     max-width: 320px;
     margin: 0 auto;
