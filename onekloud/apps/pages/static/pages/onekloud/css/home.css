@@ -1,8 +1,7 @@
 /* Showcase */
 
 #showcase {
-    color: #fff;
-    padding: 3em 0;
+    padding: 2em 0 3em;
     background: #202021 url('../../onekloud/img/showcase_bg.png') repeat;
     margin-bottom: 3em;
 }
@@ -21,6 +20,10 @@
     font-size: 1.5em;
     line-height: 1.4em;
     margin: 0 0 2em;
+}
+
+#showcase p {
+    color: #fff;
 }
 
 /* Showcase signup form */
