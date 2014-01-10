@@ -1,7 +1,20 @@
 /* Pricing section */
 
 .pricing-box {
+    max-width: 250px;
+    margin: 0 auto;
     text-align: center;
+}
+
+.pricing-box .border {
+    border: 5px solid #959595;
+    border-radius: 1em;
+}
+
+.price {
+    display: block;
+    font-weight: normal;
+    font-size: .9em;
 }
 
 .pricing-box .fa {
