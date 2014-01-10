@@ -5,7 +5,6 @@
     padding: 3em 0;
     background: #202021 url('../../../img/onekloud/showcase_bg.png') repeat;
     margin-bottom: 3em;
-    text-align: center;
 }
 
 #showcase .heading {
@@ -20,7 +19,7 @@
 
 #showcase .subheading {
     font-size: 1.5em;
-    line-height: 1;
+    line-height: 1.4em;
     margin: 0 0 2em;
 }
 
