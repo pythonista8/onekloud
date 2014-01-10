@@ -1,3 +1,10 @@
-.icon {
+/* Pricing section */
+
+.pricing-box {
+    text-align: center;
+}
+
+.pricing-box .fa {
     color: #009cdd;
 }
+
