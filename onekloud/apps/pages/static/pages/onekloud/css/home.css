@@ -27,6 +27,9 @@
 
 #showcase h2 {
     color: #fff;
+    font-size: 1.6em;
+    font-weight: normal;
+    margin: 0 0 1em;
 }
 
 #showcase .pure-form input[type="email"],
