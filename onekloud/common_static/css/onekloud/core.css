@@ -25,13 +25,16 @@ dt {
 
 /* Typography */
 
+h1, h2, h3, h4, h5, h6 {
+    color: #393e46;
+}
+
 h2 {
     margin: .3em 0 .5em;
 }
 
 h3, h4, h5, h6 {
     padding-bottom: .4em;
-    color: #333;
     border-bottom: 1px solid #e5e5e5;
 }
 
