@@ -23,15 +23,17 @@
                         Learn more
                     </a>
                 </div>
-                <div class="pure-u-1-2">
-                    <form class="pure-form pure-form-stacked pull-right">
-                        {% csrf_token %}
-
-                        <input type="email" placeholder="Your email">
-                        <input type="password" placeholder="Create a password">
-                        <input type="submit" value="Signup"
-                               class="pure-button pure-button-xlarge pure-button-primary">
-                    </form>
+                <div id="form" class="pure-u-1-2">
+                    <div class="pull-right">
+                        <h2>Sign up for free trial</h2>
+                        <form class="pure-form pure-form-stacked">
+                            {% csrf_token %}
+                            <input type="email" placeholder="Your email">
+                            <input type="password" placeholder="Create a password">
+                            <input type="submit" value="Sign Up"
+                                   class="pure-button pure-button-xlarge pure-button-success">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
