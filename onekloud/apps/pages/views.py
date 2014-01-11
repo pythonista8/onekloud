@@ -21,9 +21,12 @@ def contact(request):
         if form.is_valid():
             data = form.cleaned_data
             recipients = ('aldash@onekloud.com', 'samantha@onekloud.com')
-            send_mail(data['subject'], data['body'], data['email'], recipients)
-            messages.success(request, "Thank you for getting in touch! We "
-                                      "will reply you within 24 hours.")
+            send_mail(
+                data['subject'], data['body'], data['email'], recipients,
+                fail_silently=False)
+            messages.success(
+                request, "Thank you for getting in touch! We will reply you "
+                         "within 24 hours.")
         else:
             messages.error(request, form.errors)
     else:
