@@ -16,18 +16,22 @@
             <div class="pure-g-r">
                 <div class="pure-u-2-3">
                     <div class="l-box">
-                        <form id="contact-form" class="pure-form" method="post">
+                        <form id="contact-form" class="pure-form pure-form-stacked" method="post">
                             {% csrf_token %}
-                            <input type="text" placeholder="Subject" required>
-                            <input type="email" placeholder="Email" required>
-                            <textarea placeholder="Send us a message" required></textarea>
-                            <input type="submit" class="pure-button pure-button-primary" value="Send">
+                            <input type="text" name="subject" class="pure-input-2-3" placeholder="Subject" required>
+                            <input type="email" name="email" class="pure-input-2-3" placeholder="Email" required>
+                            <textarea name="body" class="pure-input-1" placeholder="Send us a message" required></textarea>
+                            <input type="submit" class="pure-button pure-button-primary pull-right" value="Send">
                         </form>
                     </div>
                 </div>
                 <div class="pure-u-1-3">
                     <div class="l-box">
-                        Call us at +60 13 372 7700
+                        Or call us at:
+                        <div class="phone">+60 13 372 7700</div>
+                        <small class="gray">
+                            Location: Kuala Lumpur, WP, Malaysia.
+                        </small>
                     </div>
                 </div>
             </div>
