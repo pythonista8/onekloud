@@ -78,7 +78,7 @@
                                             <a href="/">Documentation</a>
                                         </li>
                                         <li>
-                                            <a href="/">Contact</a>
+                                            <a href="{% url 'pages:contact' %}">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -119,8 +119,10 @@
 
     {# JavaScript testing. #}
     {% if debug %}
+        <!--
         <script src="{% static 'js/vendor/qunit/qunit-1.12.0.js' %}"></script>
         <script src="{% static 'js/onekloud/tests.js' %}"></script>
+        -->
     {% endif %}
 
     {# Inherited JavaScript files are included in `js` block. #}

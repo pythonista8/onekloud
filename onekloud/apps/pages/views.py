@@ -9,3 +9,8 @@ def home(request):
 def pricing(request):
     ctx = dict(title="Pricing")
     return render(request, 'pages/pricing.html', ctx)
+
+
+def contact(request):
+    ctx = dict(title="Contact")
+    return render(request, 'pages/contact.html', ctx)

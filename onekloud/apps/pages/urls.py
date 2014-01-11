@@ -4,4 +4,5 @@ urlpatterns = patterns(
     'apps.pages.views',
     url(r'^$', 'home', name='home'),
     url(r'^pricing/$', 'pricing', name='pricing'),
+    url(r'^contact/$', 'contact', name='contact'),
 )
