@@ -19,6 +19,7 @@ dt {
 }
 
 ::selection,
+::-webkit-selection,
 ::-moz-selection {
     background-color: #d5eafc;
 }
