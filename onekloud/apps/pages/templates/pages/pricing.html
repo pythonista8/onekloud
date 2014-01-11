@@ -1,5 +1,4 @@
 {% extends 'onekloud/base.html' %}
-
 {% load static %}
 
 {% block css %}
@@ -12,15 +11,14 @@
         <div class="l-box">
             <h1>Pricing</h1>
             <p>
-                Discover the convenient way to manage your customers.
+                Onekloud CRM's pricing is flexible. Pay as you grow.
             </p>
-
             <div id="pricing-section" class="pure-g-r">
                 <div class="pure-u-1-2 pricing-box">
                     <div class="l-box">
                         <div class="border">
                             <h2>
-                                Individual
+                                Per User
                                 <span class="price gray">$20/month</span>
                             </h2>
                             <p>
@@ -28,7 +26,7 @@
                                 Unlimited <span class="gray">events</span><br>
                                 <span class="gray">Advanced reports</span>
                             </p>
-                            <a href="#" class="pure-button pure-button-xlarge pure-button-primary">
+                            <a href="#" class="pure-button pure-button-xlarge pure-button-success">
                                 Subscribe
                             </a>
                         </div>
@@ -38,7 +36,7 @@
                     <div class="l-box">
                         <div class="border">
                             <h2>
-                                Trial
+                                30-days Trial
                                 <span class="price gray">Free</span>
                             </h2>
                             <p>
@@ -47,7 +45,7 @@
                                 <span class="gray">Simple reports</span>
                             </p>
                             <a href="#" class="pure-button pure-button-xlarge pure-button-primary">
-                                Signup
+                                Sign Up
                             </a>
                         </div>
                     </div>
@@ -57,15 +55,22 @@
             <div class="pure-g-r">
                 <div class="pure-u-1-3">
                     <div class="l-box">
-                        <h2>Cloud technology</h2>
+                        <h3>
+                            <i class="fa fa-cloud"></i>&nbsp;
+                            Cloud Technology
+                        </h3>
                         <p>
-                            On-demand power burst. Uptime 99.99%.
+                            Automated on-demand power burst. Uptime 99.99%.
+                            Manage your customers and let us do the rest.
                         </p>
                     </div>
                 </div>
                 <div class="pure-u-1-3">
                     <div class="l-box">
-                        <h2>Customer Management</h2>
+                        <h3>
+                            <i class="fa fa-users"></i>&nbsp;
+                            Customer Management
+                        </h3>
                         <p>
                             We encourage simplicity. You will find Onekloud CRM
                             extremely easy to use.
@@ -74,7 +79,10 @@
                 </div>
                 <div class="pure-u-1-3">
                     <div class="l-box">
-                        <h2>256-bit SSL Security</h2>
+                        <h3>
+                            <i class="fa fa-lock"></i>&nbsp;
+                            256-bit SSL Security
+                        </h3>
                         <p>
                             Onekloud CRM uses 256-bit SSL encryption.
                             Therefore, your private data is well protected.
@@ -85,4 +93,8 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block menu-pricing %}
+pure-menu-selected
 {% endblock %}

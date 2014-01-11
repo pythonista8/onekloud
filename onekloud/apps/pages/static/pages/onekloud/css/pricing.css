@@ -2,9 +2,7 @@
 
 #pricing-section {
     width: 75%;
-    border-bottom: 1px solid #e2e7ec;
-    margin: 1.5em auto 2em;
-    padding-bottom: 2.8em;
+    margin: 1.5em auto 1em;
 }
 
 .pricing-box {
@@ -26,7 +24,8 @@
 }
 
 .pricing-box h2 {
-    padding-bottom: 1em;
+    padding-bottom: 0.8em;
+    margin-top: 0;
     border-bottom: 1px solid #e2e7ec;
 }
 

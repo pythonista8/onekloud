@@ -10,3 +10,7 @@
 #menu .pure-menu .menu-item-divided {
     border-left: 1px solid #333;
 }
+
+#menu .pure-menu-selected {
+    background: #eee;
+}

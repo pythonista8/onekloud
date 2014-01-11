@@ -1,5 +1,4 @@
 {% extends 'onekloud/base.html' %}
-
 {% load static %}
 
 {% block css %}
@@ -20,7 +19,7 @@
                             Simplify your management.<br>
                             Close deals faster.
                         </p>
-                        <a href="#" class="pure-button pure-button-xlarge pure-button-primary">
+                        <a href="#" id="learn-more" class="pure-button pure-button-xlarge pure-button-primary">
                             <i class="fa fa-angle-right"></i>&nbsp;
                             Learn more
                         </a>
@@ -45,45 +44,102 @@
 {% endblock %}
 
 {% block content %}
-<div id="marketing-section" class="pure-g-r">
-    <div class="pure-u-1-3">
+<section class="pure-g-r section">
+    <div class="pure-u-1">
         <div class="l-box">
-            <div class="icon">
-                <i class="fa fa-rocket"></i>
+            <h2 class="heading">
+                Simplify Your Management
+            </h2>
+            <div class="pure-g-r">
+                <div class="pure-u-1-2">
+                    <div class="l-box">
+                        <p>
+                            Experience our Onekloud CRM to maximize your
+                            winning. Don't overwhelm yourself with paperwork,
+                            use Onekloud CRM to manage meetings and follow-ups.
+                        </p>
+                    </div>
+                </div>
+                <div class="pure-u-1-2">
+                    <div class="l-box">
+                        <img src="{% static 'pages/onekloud/img/simplify-your-management.png' %}" alt="Customers">
+                    </div>
+                </div>
             </div>
-            <h1 class="heading">Increase productivity</h1>
-            <p>
-                Close deals faster with Onekloud CRM. Simple user interface
-                will give you ability to concentrate on a target itself,
-                not the system.
-            </p>
         </div>
     </div>
-    <div class="pure-u-1-3">
+</section>
+
+<section class="pure-g-r section">
+    <div class="pure-u-1">
         <div class="l-box">
-            <div class="icon">
-                <i class="fa fa-users"></i>
+            <h2 class="heading">
+                Easy to Use
+            </h2>
+            <div class="pure-g-r">
+                <div class="pure-u-1-2">
+                    <div class="l-box">
+                        <img src="{% static 'pages/onekloud/img/easy-to-use.png' %}" alt="Customers">
+                    </div>
+                </div>
+                <div class="pure-u-1-2">
+                    <div class="l-box">
+                        <p>
+                            Intuitive and clean interface was made for humans
+                            to make your daily routine easier and more
+                            enjoyable.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <h1 class="heading">Organize client list</h1>
-            <p>
-                Close deals faster with Onekloud CRM. Simple user interface
-                will give you ability to concentrate on a target itself,
-                not the system.
-            </p>
         </div>
     </div>
-    <div class="pure-u-1-3">
+</section>
+
+<section class="pure-g-r section">
+    <div class="pure-u-1">
         <div class="l-box">
-            <div class="icon">
-                <i class="fa fa-tasks"></i>
+            <h2 class="heading">
+                Wide Accessibility
+            </h2>
+            <div class="pure-g-r">
+                <div class="pure-u-1-2">
+                    <div class="l-box">
+                        <p>
+                            Don't limit your team using Onekloud CRM only in
+                            the office.
+                        </p>
+                        <p>
+                            Onekloud CRM is mobile- and
+                            tablet-friendly, what makes you able to use it at
+                            trade shows, seminars, meetings and anywhere else.
+                        </p>
+                    </div>
+                </div>
+                <div class="pure-u-1-2">
+                    <div class="l-box">
+                        <img src="{% static 'pages/onekloud/img/simplify-your-management.png' %}" alt="Customers">
+                    </div>
+                </div>
             </div>
-            <h1 class="heading">Track progress</h1>
-            <p>
-                Close deals faster with Onekloud CRM. Simple user interface
-                will give you ability to concentrate on a target itself,
-                not the system.
-            </p>
         </div>
     </div>
+</section>
+
+<div id="signup" class="section">
+    <p>
+        Ready? Sign up and start using 30-days trial version for free.
+    </p>
+    <a href="#" class="pure-button pure-button-xlarge pure-button-primary">
+        Sign Up
+    </a>
 </div>
+{% endblock %}
+
+{% block menu-home %}
+pure-menu-selected
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'pages/onekloud/js/home.js' %}"></script>
 {% endblock %}

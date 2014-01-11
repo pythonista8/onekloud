@@ -19,7 +19,7 @@
         <title>Onekloud · Simplify your management.</title>
     {% endif %}
 
-    <link href="{% static 'img/onekloud/favicon.ico' %}" rel="shortcut icon">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/onekloud/favicon.ico' %}">
 
     {# Vendor CSS files. #}
     <link href="{% static 'css/vendor/font_awesome/css/font-awesome.css' %}" rel="stylesheet">
@@ -30,6 +30,13 @@
     <link href="{% static 'css/onekloud/menu.css' %}" rel="stylesheet">
     <link href="{% static 'css/onekloud/buttons.css' %}" rel="stylesheet">
     <link href="{% static 'css/onekloud/forms.css' %}" rel="stylesheet">
+
+    {# Vendor JavaScript files. #}
+    <script src="{% static 'js/vendor/jquery/jquery-2.0.3.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery/jquery-ui-1.10.3.js' %}"></script>
+
+    {# Onekloud JavaScript files. #}
+    <script src="{% static 'js/onekloud/lib.js' %}"></script>
 
     {# Inherited CSS files are included in `css` block. #}
     {% block css %}{% endblock %}
@@ -57,13 +64,10 @@
                             <div class="l-box">
                                 <div class="pure-menu pure-menu-open pure-menu-horizontal">
                                     <ul class="pull-right">
-                                        <li class="pure-menu-selected">
+                                        <li class="{% block menu-home %}{% endblock %}">
                                             <a href="/">Home</a>
                                         </li>
-                                        <li>
-                                            <a href="/">Features</a>
-                                        </li>
-                                        <li>
+                                        <li class="{% block menu-pricing %}{% endblock %}">
                                             <a href="{% url 'pages:pricing' %}">Pricing</a>
                                         </li>
                                         <li>
@@ -94,7 +98,10 @@
     <div class="pure-g-r">
         <div id="content" class="wrap pure-u-1">
 
-            {# Inherited content is included inside `content` block. #}
+            {# Notification messages. #}
+            {% include 'onekloud/messages.html' %}
+
+            {# Inherited content is included in `content` block. #}
             {% block content %}{% endblock %}
 
         </div>
@@ -102,6 +109,10 @@
         {% include 'onekloud/footer.html' %}
     </div>
 
+    {# Inherited JavaScript files are included in `js` block. #}
+    {% block js %}{% endblock %}
+
+    {# Google Analytics tracking code for `UA-46858281-1`. #}
     {% include 'vendor/google_analytics.html' %}
 </body>
 </html>
