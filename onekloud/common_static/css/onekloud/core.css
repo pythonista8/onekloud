@@ -18,8 +18,10 @@ dt {
     font-weight: bold;
 }
 
-::selection,
-::-webkit-selection,
+::selection {
+    background-color: #d5eafc;
+}
+
 ::-moz-selection {
     background-color: #d5eafc;
 }
