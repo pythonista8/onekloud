@@ -1,0 +1,9 @@
+#content p,
+#content ul,
+#content ol {
+    font-size: 80%;
+}
+
+#content h3 {
+    margin-top: 2em;
+}

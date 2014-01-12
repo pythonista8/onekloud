@@ -37,3 +37,8 @@ def contact(request):
     else:
         ctx['form'] = ContactForm()
     return render(request, 'pages/contact.html', ctx)
+
+
+def privacy(request):
+    ctx = dict(title="Privacy Statement")
+    return render(request, 'pages/privacy.html', ctx)

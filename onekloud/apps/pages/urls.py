@@ -5,4 +5,6 @@ urlpatterns = patterns(
     url(r'^$', 'home', name='home'),
     url(r'^pricing/$', 'pricing', name='pricing'),
     url(r'^contact/$', 'contact', name='contact'),
+
+    url(r'^privacy/$', 'privacy', name='privacy'),
 )
