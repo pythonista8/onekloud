@@ -8,17 +8,18 @@ $('#signup .pure-button').on('click', function(event) {
   scrollToAnchor('showcase', function() {
     var signupContainer = $('#signup-form-container');
 
-    $('.fade').fadeIn();
+    $('.fade').fadeIn(250);
 
     signupContainer.animate({
-      background: '#202021'
-    }, 1000, 'easeOutQuart', function() {
+      backgroundColor: '#202021'
+    }, 250, 'easeOutQuart', function() {
       setTimeout(function() {
-        $('.fade').fadeOut();
+        $('.fade').fadeOut(250);
 
         signupContainer.animate({
-          background: 'transparent'
-        });
+          backgroundColor: 'transparent'
+        }, 250, 'easeOutQuart');
+
       }, 3000);
     });
   });
