@@ -1,4 +1,5 @@
-$('#learn-more').on('click', function() {
+$('#learn-more').on('click', function(event) {
+  event.preventDefault;
   scrollToAnchor('content');
 });
 
