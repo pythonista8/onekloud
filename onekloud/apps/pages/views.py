@@ -42,3 +42,8 @@ def contact(request):
 def privacy(request):
     ctx = dict(title="Privacy Statement")
     return render(request, 'pages/privacy.html', ctx)
+
+
+def terms_of_service(request):
+    ctx = dict(title="Terms of Service")
+    return render(request, 'pages/terms_of_service.html', ctx)
