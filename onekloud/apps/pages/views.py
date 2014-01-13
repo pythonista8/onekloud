@@ -3,11 +3,18 @@ from django.core.mail import EmailMessage
 from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
-from apps.pages.forms import ContactForm
+from lib.encrypt import hmac_sha256
+from apps.pages.forms import SignupForm, ContactForm
 
 
 def home(request):
     ctx = dict()
+    if request.method == 'POST':
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            pass  # send request using hmac_sha256
+    else:
+        ctx['form'] = SignupForm()
     return render(request, 'pages/home.html', ctx)
 
 

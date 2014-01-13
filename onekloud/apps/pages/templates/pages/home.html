@@ -30,10 +30,10 @@
                         <h2>Sign up for free trial</h2>
                         <form class="pure-form pure-form-stacked">
                             {% csrf_token %}
-                            <input type="email" placeholder="Your email">
-                            <input type="password" placeholder="Create a password">
-                            <input type="submit" value="Sign Up"
-                                   class="pure-button pure-button-xlarge pure-button-success">
+                            <input type="email" name="email" placeholder="Your email" required>
+                            <input type="password" name="password" placeholder="Create a password" required>
+                            <input type="text" name="company" placeholder="Your company name" required>
+                            <input type="submit" value="Sign Up" class="pure-button pure-button-xlarge pure-button-success">
                         </form>
                     </div>
                 </div>
