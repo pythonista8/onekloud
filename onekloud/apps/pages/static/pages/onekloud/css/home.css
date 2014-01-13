@@ -49,6 +49,22 @@
     width: 100%;
 }
 
+#signup-form-container {
+    position: relative;
+    z-index: 10;
+}
+
+/* Extra elements */
+
+.fade {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    z-index: 10;
+}
+
 /* Marketing section */
 
 #marketing-section p {
