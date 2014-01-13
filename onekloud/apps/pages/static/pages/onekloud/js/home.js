@@ -8,6 +8,7 @@ $('#signup .pure-button').on('click', function() {
     var signupContainer = $('#signup-form-container');
 
     $('.fade').fadeIn(250);
+    signupContainer.find('input[name="email"]').focus();
 
     signupContainer.css('border-radius', 5).animate({
       backgroundColor: '#202021'
