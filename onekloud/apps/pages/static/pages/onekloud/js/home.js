@@ -1,11 +1,9 @@
-$('#learn-more').on('click', function(event) {
-  event.preventDefault;
+$('#learn-more').on('click', function() {
   scrollToAnchor('content');
+  return false;
 });
 
-$('#signup .pure-button').on('click', function(event) {
-  event.preventDefault;
-
+$('#signup .pure-button').on('click', function() {
   scrollToAnchor('showcase', function() {
     var signupContainer = $('#signup-form-container');
 
@@ -14,6 +12,7 @@ $('#signup .pure-button').on('click', function(event) {
     signupContainer.css('border-radius', 5).animate({
       backgroundColor: '#202021'
     }, 250, 'easeOutQuart', function() {
+
       setTimeout(function() {
         $('.fade').fadeOut(250);
 
@@ -23,6 +22,7 @@ $('#signup .pure-button').on('click', function(event) {
           signupContainer.css('border-radius', 0);
         });
       }, 3000);
+
     });
   });
 
