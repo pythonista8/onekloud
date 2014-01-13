@@ -6,15 +6,16 @@ $('#signup .pure-button').on('click', function(event) {
   event.preventDefault;
 
   scrollToAnchor('showcase', function() {
-    $('.fade').hide().css('display', 'block').fadeIn();
-
     var signupContainer = $('#signup-form-container');
+
+    $('.fade').fadeIn();
 
     signupContainer.animate({
       background: '#202021'
     }, 1000, 'easeOutQuart', function() {
       setTimeout(function() {
         $('.fade').fadeOut();
+
         signupContainer.animate({
           background: 'transparent'
         });
