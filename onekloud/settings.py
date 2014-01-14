@@ -31,8 +31,10 @@ DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
+HOST_IP = '37.139.24.123'
+
 ALLOWED_HOSTS = [
-    '37.139.24.123',
+    HOST_IP,
     'www.onekloud.com'
 ]
 

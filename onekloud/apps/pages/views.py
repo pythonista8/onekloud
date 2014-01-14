@@ -1,3 +1,7 @@
+import sys
+import urllib
+
+from django.conf import settings
 from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.shortcuts import render
@@ -12,7 +16,21 @@ def home(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
-            pass  # send request using hmac_sha256
+            data = form.cleaned_data
+            hash_ = hmac_sha256(
+                '{email}{key}{company}'.format(key=settings.HMAC_KEY,
+                                               email=data['email'],
+                                               company=data['company']))
+            url = 'https://crm.onekloud.com/auth/create_user'
+            req = urllib.request.Request(url, data=data,
+                                         origin_req_host=settings.HOST_IP)
+            req.add_header('Authorization', hash_)
+            req.add_header('Content-Length', sys.getsizeof(data))
+            resp = urllib.request.urlopen(req).read()
+            if resp.status_code == 200:
+                messages.success(request, "Success!")
+            else:
+                messages.error(request, "Error!")
     else:
         ctx['form'] = SignupForm()
     return render(request, 'pages/home.html', ctx)
