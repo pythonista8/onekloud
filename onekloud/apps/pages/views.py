@@ -2,7 +2,6 @@ import hashlib
 
 from django.conf import settings
 from django.contrib import messages
-from django.contrib.auth.hashers import make_password
 from django.core.mail import EmailMessage
 from django.shortcuts import render
 from django.template.loader import render_to_string
@@ -15,17 +14,18 @@ def home(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
+            # Email settings.
             subject = "Registration confirmation for Onekloud CRM"
             support_email = 'support@onekloud.com'
-
             data = form.cleaned_data
-            # Store password hash instead of plain-text.
-            password = make_password(data['password'])
-            data['password'] = password.replace('pbkdf2_sha256$12000$', '')
 
-            key = '{key}{email}'.format(key=settings.ACTIVATION_KEY,
-                                        email=data['email']).encode('utf8')
+            # With this hash we will check if passed data is valid.
+            key = '{key}{email}{company}'.format(
+                key=settings.ACTIVATION_SALT, email=data['email'],
+                company=data['company']).encode('utf8')
+
             data['hash'] = hashlib.md5(key).hexdigest()
+
             html = mark_safe(
                 render_to_string('pages/activation_email.html', data))
             msg = EmailMessage(
