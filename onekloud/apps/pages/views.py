@@ -1,5 +1,6 @@
 import sys
-import urllib
+import urllib.request
+import urllib.parse
 
 from django.conf import settings
 from django.contrib import messages
@@ -22,7 +23,8 @@ def home(request):
                                                email=data['email'],
                                                company=data['company']))
             url = 'https://crm.onekloud.com/auth/create_user'
-            req = urllib.request.Request(url, data=data,
+            encdata = urllib.parse.urlencode(data).encode('utf8')
+            req = urllib.request.Request(url, data=encdata,
                                          origin_req_host=settings.HOST_IP)
             req.add_header('Authorization', hash_)
             req.add_header('Content-Length', sys.getsizeof(data))
