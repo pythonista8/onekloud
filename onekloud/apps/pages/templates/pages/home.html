@@ -32,8 +32,8 @@
                         <h2>Sign up for free trial</h2>
                         <form class="pure-form pure-form-stacked" method="post">
                             {% csrf_token %}
-                            <input type="email" name="email" placeholder="&#xf0e0;  Your email" required>
-                            <input type="text" name="company" placeholder="&#xf0b1;  Your company name" required>
+                            <input type="email" name="email" placeholder="&#xf0e0;  Your email" autocomplete="off" required>
+                            <input type="text" name="company" placeholder="&#xf0b1;  Your company name" autocomplete="off" required>
                             <input type="submit" value="Sign Up" class="pure-button pure-button-xlarge pure-button-success">
                         </form>
                     </div>
@@ -57,7 +57,8 @@
                         <p>
                             Experience our Onekloud CRM to maximize your
                             winning. Don't overwhelm yourself with paperwork,
-                            use Onekloud CRM to manage meetings and follow-ups.
+                            use Onekloud CRM to manage your clients, meetings
+                            and follow-ups.
                         </p>
                     </div>
                 </div>
@@ -88,9 +89,9 @@
                 <div class="pure-u-1-2">
                     <div class="l-box">
                         <p>
-                            Intuitive and clean interface was made for humans
-                            to make your daily routine easier and more
-                            enjoyable.
+                            Intuitive and clean interface - made for
+                            professionals, to make your daily routine easier
+                            and more enjoyable.
                         </p>
                     </div>
                 </div>
@@ -109,13 +110,13 @@
                 <div class="pure-u-1-2">
                     <div class="l-box">
                         <p>
-                            Don't limit your team using Onekloud CRM only in
-                            the office.
+                            Don't limit yourself by using Onekloud CRM only in
+                            the office!
                         </p>
                         <p>
-                            Onekloud CRM is mobile- and
-                            tablet-friendly, what makes you able to use it at
-                            trade shows, seminars, meetings and anywhere else.
+                            Onekloud CRM is tablet and mobile-friendly.
+                            Accessible at trade shows, seminars, meetings and
+                            anywhere else.
                         </p>
                     </div>
                 </div>
@@ -130,14 +131,17 @@
     </div>
 </section>
 
-<div id="signup" class="section pure-hidden-phone">
+<section id="signup" class="section center">
+    <h2 class="heading">Free Trial</h2>
     <p>
-        Ready? Sign up and start using 30-days trial version for free.
+        Don't fuss! Sign up for 30-days free trial and experience
+        <br>
+        a wonderful journey with Onekloud CRM.
     </p>
-    <a href="#" class="pure-button pure-button-xlarge pure-button-primary">
+    <a href="#" class="pure-button pure-button-xlarge pure-button-primary pure-hidden-phone">
         Sign Up
     </a>
-</div>
+</section>
 {% endblock %}
 
 {% block menu-home %}

@@ -51,6 +51,10 @@ h3, h4, h5, h6 {
     color: #ee5f5b;
 }
 
+.center {
+    text-align: center;
+}
+
 .nomargin {
     margin: 0;
 }
