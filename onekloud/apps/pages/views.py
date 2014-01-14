@@ -20,7 +20,8 @@ def home(request):
 
             data = form.cleaned_data
             # Store password hash instead of plain-text.
-            data['password'] = make_password(data['password'])
+            password = make_password(data['password'])
+            data['password'] = password.replace('pbkdf2_sha256$12000$', '')
 
             key = '{key}{email}'.format(key=settings.ACTIVATION_KEY,
                                         email=data['email']).encode('utf8')
