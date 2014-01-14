@@ -1,14 +1,12 @@
-import sys
-import urllib.request
-import urllib.parse
+import hashlib
 
 from django.conf import settings
 from django.contrib import messages
+from django.contrib.auth.hashers import make_password
 from django.core.mail import EmailMessage
 from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
-from lib.encrypt import hmac_sha256
 from apps.pages.forms import SignupForm, ContactForm
 
 
@@ -17,22 +15,26 @@ def home(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
+            subject = "Registration confirmation for Onekloud CRM"
+            support_email = 'support@onekloud.com'
+
             data = form.cleaned_data
-            hash_ = hmac_sha256(
-                '{email}{key}{company}'.format(key=settings.HMAC_KEY,
-                                               email=data['email'],
-                                               company=data['company']))
-            url = 'https://crm.onekloud.com/auth/create_user'
-            encdata = urllib.parse.urlencode(data).encode('utf8')
-            req = urllib.request.Request(url, data=encdata,
-                                         origin_req_host=settings.HOST_IP)
-            req.add_header('Authorization', hash_)
-            req.add_header('Content-Length', sys.getsizeof(data))
-            resp = urllib.request.urlopen(req).read()
-            if resp.status_code == 200:
-                messages.success(request, "Success!")
-            else:
-                messages.error(request, "Error!")
+            # Store password hash instead of plain-text.
+            data['password'] = make_password(data['password'])
+
+            key = '{key}{email}'.format(key=settings.ACTIVATION_KEY,
+                                        email=data['email']).encode('utf8')
+            data['hash'] = hashlib.md5(key).hexdigest()
+            html = mark_safe(
+                render_to_string('pages/activation_email.html', data))
+            msg = EmailMessage(
+                subject, html, support_email, [data['email']],
+                headers={'Reply-To': support_email})
+            msg.content_subtype = 'html'
+            msg.send()
+            messages.success(
+                request, "Thank you! We have sent you activation link to "
+                         "{email}.".format(email=data['email']))
     else:
         ctx['form'] = SignupForm()
     return render(request, 'pages/home.html', ctx)
