@@ -1,4 +1,5 @@
 import hashlib
+import urllib.parse
 
 from django.conf import settings
 from django.contrib import messages
@@ -15,7 +16,7 @@ def home(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             # Email settings.
-            subject = "Registration confirmation for Onekloud CRM"
+            subject = "Free trial activation for Onekloud CRM"
             support_email = 'support@onekloud.com'
             data = form.cleaned_data
 
@@ -23,11 +24,11 @@ def home(request):
             key = '{key}{email}{company}'.format(
                 key=settings.ACTIVATION_SALT, email=data['email'],
                 company=data['company']).encode('utf8')
+            data['key'] = hashlib.md5(key).hexdigest()
 
-            data['hash'] = hashlib.md5(key).hexdigest()
-
-            html = mark_safe(
-                render_to_string('pages/activation_email.html', data))
+            encdata = urllib.parse.urlencode(data)
+            html = mark_safe(render_to_string('pages/activation_email.html',
+                                              dict(params=encdata)))
             msg = EmailMessage(
                 subject, html, support_email, [data['email']],
                 headers={'Reply-To': support_email})
