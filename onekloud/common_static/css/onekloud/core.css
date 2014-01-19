@@ -98,7 +98,7 @@ h3, h4, h5, h6 {
 
 #content {
     margin-bottom: 50px;
-    padding: 1em 2em 3em;
+    padding: 1em 0 3em;
 }
 
 #content p {
@@ -140,6 +140,10 @@ h3, h4, h5, h6 {
     border-top: 1px solid #e5e5e5;
     padding-top: 1em;
     padding-bottom: 1em;
+}
+
+#footer .pure-menu {
+    background: #f9f9f9;
 }
 
 #copyright {
