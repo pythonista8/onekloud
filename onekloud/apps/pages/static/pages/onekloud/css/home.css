@@ -1,18 +1,25 @@
 /* Showcase */
 
 #showcase {
-    padding: 2em 0 3em;
-    background: #202021 url('../../onekloud/img/showcase_bg.png') repeat;
-    margin-bottom: 3em;
+    padding: 4em 0 6em;
+    background: #27a2cb;
+    background: -moz-linear-gradient(top, #27a2cb 0%, #16d0dc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #27a2cb), color-stop(100%, #16d0dc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #27a2cb 0%, #16d0dc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #27a2cb 0%, #16d0dc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #27a2cb 0%, #16d0dc 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #27a2cb 0%, #16d0dc 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#27a2cb', endColorstr='#16d0dc', GradientType=0); /* IE6-9 */
 }
 
 #showcase .heading {
-    color: #12c8e8;
+    color: #fff;
     font-size: 4em;
     font-weight: normal;
     line-height: 1;
     margin: 0 0 .3em;
     letter-spacing: -1px;
+    text-shadow: rgba(0,0,0,.4) 0 4px 0;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -20,6 +27,7 @@
     font-size: 1.5em;
     line-height: 1.4em;
     margin: 0 0 2em;
+    text-shadow: rgba(0,0,0,.25) 0 2px 0;
 }
 
 #showcase p {
@@ -33,6 +41,7 @@
     font-size: 1.6em;
     font-weight: normal;
     margin: 0 0 1.15em;
+    text-shadow: rgba(0,0,0,.25) 0 2px 0;
 }
 
 #showcase .pure-form input[type="email"],
@@ -43,6 +52,7 @@
     font-family: 'FontAwesome', sans-serif;
     padding: 1em 1.2em;
     margin: .7em 0;
+    border-color: #fff;
 }
 
 #showcase .pure-form .pure-button {
