@@ -4,12 +4,13 @@ from django.utils.safestring import mark_safe
 
 
 def send_invitation(email_list):
-    html = mark_safe(render_to_string('onekloud/email/welcome.html', dict()))
-    subject = 'Blah'
-    support_email = 'support@onekloud.com'
+    subject = "Welcome to Onekloud CRM!"
+    from_ = 'support@onekloud.com'
+    bcc = ('aldash@onekloud.com', 'samantha@onekloud.com')
+    html = mark_safe(render_to_string('onekloud/email/welcome.html'))
+
     for email in email_list:
-        msg = EmailMessage(
-            subject, html, support_email, ['aldash@onekloud.com'],
-            headers={'Reply-To': support_email})
+        msg = EmailMessage(subject, html, from_, [email], bcc,
+                           headers={'Reply-To': from_})
         msg.content_subtype = 'html'
-        msg.send()
+        msg.send(fail_silently=True)
