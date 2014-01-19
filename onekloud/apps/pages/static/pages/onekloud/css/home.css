@@ -2,6 +2,7 @@
 
 #showcase {
     padding: 4em 0 6em;
+    margin-bottom: 3em;
     background: #27a2cb;
     background: -moz-linear-gradient(top, #27a2cb 0%, #16d0dc 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #27a2cb), color-stop(100%, #16d0dc));
