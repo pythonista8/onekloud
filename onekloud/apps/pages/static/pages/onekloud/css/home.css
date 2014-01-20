@@ -27,7 +27,7 @@
     font-size: 1.5em;
     line-height: 1.4em;
     margin: 0 0 2em;
-    text-shadow: rgba(0,0,0,.25) 0 2px 0;
+    text-shadow: rgba(0,0,0,.25) 0 1px 0;
 }
 
 #showcase p {
@@ -54,6 +54,13 @@
     margin: .7em 0;
     border-color: #fff;
 }
+
+#showcase .pure-form input[type="email"]:focus,
+#showcase .pure-form input[type="password"]:focus,
+#showcase .pure-form input[type="text"]:focus {
+    border-color: #fff !important;
+}
+
 
 #showcase .pure-form .pure-button {
     width: 100%;
