@@ -7,7 +7,7 @@ $('.contact').on('click', function(event) {
     closeOnEscape: true,
     closeText: '&#xf00d',
     width: 450,
-    title: "Contact Us"
+    title: "Subscribe Now"
   });
 
   var type = $(this).data('type');
