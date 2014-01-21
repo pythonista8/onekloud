@@ -127,7 +127,11 @@ h3, h4, h5, h6 {
     padding: 1em;
 }
 
-/* jQuery UI */
+/* jQuery UI - Modal */
+
+.modal {
+    display: none;
+}
 
 .ui-widget-overlay {
     position: fixed;
