@@ -127,7 +127,23 @@ h3, h4, h5, h6 {
     padding: 1em;
 }
 
-/* jQuery UI */
+/* jQuery UI - Modal */
+
+.modal {
+    display: none;
+}
+
+.ui-dialog {
+    padding: 2em;
+    background: #fff;
+    z-index: 10;
+    border-radius: .5em;
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,.1);
+    -o-box-shadow: 0 0 5px rgba(0,0,0,.1);
+    -ms-box-shadow: 0 0 5px rgba(0,0,0,.1);
+}
 
 .ui-widget-overlay {
     position: fixed;
@@ -135,6 +151,7 @@ h3, h4, h5, h6 {
     height: 100%;
     top: 0;
     left: 0;
+    z-index: 9;
     background: rgba(226,226,226,.9);
 }
 
@@ -157,17 +174,6 @@ h3, h4, h5, h6 {
     background: none;
     border: none;
     padding: 0;
-}
-
-.ui-dialog {
-    padding: 2em;
-    background: #fff;
-    border-radius: .5em;
-    box-shadow: 0 0 5px rgba(0,0,0,.1);
-    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.1);
-    -moz-box-shadow: 0 0 5px rgba(0,0,0,.1);
-    -o-box-shadow: 0 0 5px rgba(0,0,0,.1);
-    -ms-box-shadow: 0 0 5px rgba(0,0,0,.1);
 }
 
 /* Footer */
