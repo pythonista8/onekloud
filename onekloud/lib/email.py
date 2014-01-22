@@ -15,8 +15,10 @@ def send_invitation(email_list):
                            headers={'Reply-To': from_})
         msg.content_subtype = 'html'
         msg.send(fail_silently=True)
-        print("{i} out of {total}: {email}".format(i=i, total=len(email_list), 
-                                                   email=email))
 
+        print("{i} out of {total}: {email}".format(
+            i=i + 1, total=len(email_list), email=email))
+
+        # We are not spammers.
         if i % 30 == 0:
             time.sleep(300)
