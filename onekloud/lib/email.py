@@ -1,5 +1,3 @@
-import time
-
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
@@ -18,7 +16,3 @@ def send_invitation(email_list):
 
         print("{i} out of {total}: {email}".format(
             i=i + 1, total=len(email_list), email=email))
-
-        # We are not spammers.
-        if i > 0 and i % 30 == 0:
-            time.sleep(300)
