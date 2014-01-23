@@ -17,7 +17,7 @@ def send_invitation(email_list):
             i=i + 1, total=len(email_list), email=email))
         try:
             msg.send(fail_silently=False)
-        except SMTPException, err:
+        except SMTPException as err:
             print(err)
         else:
             print("Sent")
