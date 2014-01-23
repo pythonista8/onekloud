@@ -18,6 +18,6 @@ def send_invitation(email_list):
         try:
             msg.send(fail_silently=False)
         except SMTPException:
-            print "Failed"
+            print("Failed")
         else:
-            print "Sent"
+            print("Sent")
