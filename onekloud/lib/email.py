@@ -20,5 +20,5 @@ def send_invitation(email_list):
             i=i + 1, total=len(email_list), email=email))
 
         # We are not spammers.
-        if i % 30 == 0:
+        if i > 0 and i % 30 == 0:
             time.sleep(300)
