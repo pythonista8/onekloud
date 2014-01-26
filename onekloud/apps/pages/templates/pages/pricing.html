@@ -1,6 +1,10 @@
 {% extends 'onekloud/base.html' %}
 {% load static %}
 
+{% block meta %}
+<meta name="description" content="Onekloud’s pricing gives you the flexibility, to pay as you grow! We believe you should pay according to the number of clients you have. It’s just not right for us to charge you for something you don’t need or use.">
+{% endblock %}
+
 {% block css %}
 <link href="{% static 'pages/onekloud/css/pricing.css' %}" rel="stylesheet">
 {% endblock %}
