@@ -24,8 +24,7 @@
 
 .price {
     display: block;
-    font-weight: normal;
-    font-size: .9em;
+    font: normal .9em 'Lato', sans-serif;
 }
 
 .pricing-box h2 {
