@@ -2,6 +2,12 @@ body {
     background: #f9f9f9;
 }
 
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    font-family: 'Lato', sans-serif;
+}
+
 a {
     color: #009cdd;
     text-decoration: none;
@@ -30,6 +36,7 @@ dt {
 
 h1, h2, h3, h4, h5, h6 {
     color: #393e46;
+    font-family: 'Raleway', sans-serif;
 }
 
 h2 {
