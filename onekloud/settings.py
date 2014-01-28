@@ -35,7 +35,7 @@ HOST_IP = '37.139.24.123'
 
 ALLOWED_HOSTS = [
     HOST_IP,
-    'www.onekloud.com'
+    '.onekloud.com'
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
