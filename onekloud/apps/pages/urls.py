@@ -7,5 +7,6 @@ urlpatterns = patterns(
     url(r'^contact/$', 'contact', name='contact'),
 
     url(r'^privacy/$', 'privacy', name='privacy'),
+    url(r'^refund/$', 'refund', name='refund'),
     url(r'^terms-of-service/$', 'terms_of_service', name='terms_of_service'),
 )
