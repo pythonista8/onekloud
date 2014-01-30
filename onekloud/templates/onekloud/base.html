@@ -10,7 +10,19 @@
     <meta name="viewport" content="width=device-width">
 
     {# Marketing meta information. #}
-    <meta name="keywords" content="crm, cloud, saas, sales solutions, free crm">
+    <meta name="keywords" content="crm, crm software, crm online, free crm, sales management">
+
+    <meta property="og:title" content="Onekloud • Simplify your management">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{% static 'img/onekloud/logo.png' %}">
+    <meta property="og:url" content="http://www.onekloud.com/">
+    <meta property="og:description" content="Online customer relationship management system that encourages extreme simplicity. Free trial.">
+    <meta property="fb:admins" content="100001028419487">
+
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="Onekloud">
+    <meta property="twitter:description" content="Online customer relationship management system that encourages extreme simplicity. Free trial.">
+    <meta property="twitter:image" content="{% static 'img/onekloud/logo.png' %}">
 
     {# Inherited meta information is included in `meta` block. #}
     {% block meta %}{% endblock %}
@@ -21,6 +33,7 @@
         <title>Onekloud • Simplify your management.</title>
     {% endif %}
 
+    <link href="//plus.google.com/+OnekloudLLP" rel="publisher">
     <link href="{% static 'img/onekloud/favicon.ico' %}" rel="icon" type="image/x-icon">
 
     {# Vendor CSS files. #}
