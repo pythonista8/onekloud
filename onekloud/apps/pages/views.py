@@ -38,9 +38,9 @@ def home(request):
             try:
                 msg.send(fail_silently=False)
             except SMTPException:
-                url = 'https://crm.onekloud.com/auth/activate-trial/\
-                       ?{params}'.format(params=encdata)
-                return redirect(url)
+                url = 'https://crm.onekloud.com/auth/activate-trial/'
+                full_url = '{url}?{params}'.format(url=url, params=encdata)
+                return redirect(full_url)
             else:
                 messages.success(
                     request, "Thank you! We have sent you activation link to "
