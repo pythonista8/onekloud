@@ -15,7 +15,7 @@
     <meta property="og:title" content="Onekloud • Simplify your management">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{% static 'img/onekloud/logo.png' %}">
-    <meta property="og:url" content="http://www.onekloud.com/">
+    <meta property="og:url" content="//www.onekloud.com/">
     <meta property="og:description" content="Online customer relationship management system that encourages extreme simplicity. Free trial.">
     <meta property="fb:admins" content="100001028419487">
 
@@ -33,8 +33,13 @@
         <title>Onekloud • Simplify your management.</title>
     {% endif %}
 
-    <link href="//plus.google.com/+OnekloudLLP" rel="publisher">
-    <link href="{% static 'img/onekloud/favicon.ico' %}" rel="icon" type="image/x-icon">
+    <link rel="publisher" href="//plus.google.com/+OnekloudLLP">
+    <link rel="icon" href="{% static 'img/onekloud/favicon.ico' %}" type="image/x-icon">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="prefetch prerender" href="{% url 'pages:pricing' %}">
+    <link rel="prefetch prerender" href="{% url 'pages:contact' %}">
+    <link rel="prefetch prerender" href="//crm.onekloud.com/">
 
     {# Vendor CSS files. #}
     <link href="{% static 'css/vendor/font_awesome/css/font-awesome.css' %}" rel="stylesheet">
