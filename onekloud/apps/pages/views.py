@@ -21,7 +21,6 @@ def home(request):
             # Email settings.
             subject = "Free trial activation for Onekloud CRM"
             data = form.cleaned_data
-
             # With this hash we will check if passed data is valid.
             key = '{key}{email}{company}'.format(
                 key=settings.ACTIVATION_SALT, email=data['email'],
@@ -38,6 +37,8 @@ def home(request):
             try:
                 msg.send(fail_silently=False)
             except SMTPException:
+                # Fallback: immediately authorize for Trial with no email
+                # notification.
                 url = 'https://crm.onekloud.com/auth/activate-trial/'
                 full_url = '{url}?{params}'.format(url=url, params=encdata)
                 return redirect(full_url)
