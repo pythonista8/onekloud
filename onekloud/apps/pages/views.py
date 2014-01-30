@@ -1,10 +1,11 @@
 import hashlib
 import urllib.parse
 
+from smtplib import SMTPException
 from django.conf import settings
 from django.contrib import messages
 from django.core.mail import EmailMessage
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
 from apps.pages.forms import SignupForm, ContactForm
@@ -34,10 +35,16 @@ def home(request):
                 subject, html, SUPPORT_EMAIL, [data['email']],
                 headers={'Reply-To': SUPPORT_EMAIL})
             msg.content_subtype = 'html'
-            msg.send()
-            messages.success(
-                request, "Thank you! We have sent you activation link to "
-                         "{email}.".format(email=data['email']))
+            try:
+                msg.send(fail_silently=False)
+            except SMTPException:
+                url = 'https://crm.onekloud.com/auth/activate-trial/\
+                       ?{params}'.format(params=encdata)
+                return redirect(url)
+            else:
+                messages.success(
+                    request, "Thank you! We have sent you activation link to "
+                             "{email}.".format(email=data['email']))
         else:
             messages.error(request, "Your form contains errors.")
     else:
