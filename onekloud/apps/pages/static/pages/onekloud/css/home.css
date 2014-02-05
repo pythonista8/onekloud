@@ -5,6 +5,7 @@
     margin-bottom: 3em;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    background-color: #202021;
     background-size: cover;
     -webkit-font-smoothing: antialiased;
 }
@@ -89,7 +90,6 @@
 
 #marketing-section .heading {
     font-size: 1.85em;
-    font-weight: normal;
     letter-spacing: -1px;
     margin: .5em 0 0;
     -webkit-font-smoothing: antialiased;
