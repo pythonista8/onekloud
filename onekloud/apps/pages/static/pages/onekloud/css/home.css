@@ -1,31 +1,25 @@
 /* Showcase */
 
 #showcase {
-    padding: 4em 0 6em;
+    padding: 6em 0 8em;
     margin-bottom: 3em;
-    background: #27a2cb;
-    background: -moz-linear-gradient(top, #27a2cb 0%, #16d0dc 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #27a2cb), color-stop(100%, #16d0dc));
-    background: -webkit-linear-gradient(top, #27a2cb 0%, #16d0dc 100%);
-    background: -o-linear-gradient(top, #27a2cb 0%, #16d0dc 100%);
-    background: -ms-linear-gradient(top, #27a2cb 0%, #16d0dc 100%);
-    background: linear-gradient(to bottom, #27a2cb 0%, #16d0dc 100%);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-font-smoothing: antialiased;
 }
 
 #showcase .heading {
     color: #fff;
     font: normal 4.5em/1 'Lato', sans-serif;
     margin: 0 0 .3em;
-    letter-spacing: -4px;
-    text-shadow: rgba(0,0,0,.4) 0 4px 0;
-    -webkit-font-smoothing: antialiased;
+    letter-spacing: -3px;
 }
 
 #showcase .subheading {
     font-size: 1.5em;
     line-height: 1.4em;
     margin: 0 0 1.5em;
-    text-shadow: rgba(0,0,0,.25) 0 1px 0;
 }
 
 #showcase p {
@@ -38,7 +32,6 @@
     color: #fff;
     font-size: 1.6em;
     margin: 0 0 1.15em;
-    text-shadow: rgba(0,0,0,.25) 0 1px 0;
 }
 
 #showcase .pure-form input[type="email"],
