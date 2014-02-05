@@ -4,6 +4,8 @@
 */
 
 #menu .pure-menu ul {
+    float: right;
+    width: auto;
     height: auto;
 }
 
@@ -13,4 +15,26 @@
 
 #menu .pure-menu-selected {
     background: #eee;
+}
+
+
+/* --------------------------
+ * Responsive Styles
+ * --------------------------
+*/
+
+@media (max-width: 767px) {
+    #menu {
+        width: 410px;
+        margin: 0 auto;
+    }
+
+    #menu .pure-menu ul {
+        float: none;
+    }
+
+    #logo {
+        text-align: center;
+        margin-bottom: 2em;
+    }
 }
