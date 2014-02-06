@@ -56,11 +56,6 @@
     width: 100%;
 }
 
-#signup-form-container {
-    position: relative;
-    z-index: 10;
-}
-
 /* Extra elements */
 
 .fade {
@@ -116,7 +111,7 @@
     margin-top: 1.5em;
 }
 
-.section:last-child {
+#signup {
     padding-bottom: 0;
     border-bottom: none;
 }

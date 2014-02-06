@@ -135,6 +135,18 @@ h3, h4, h5, h6 {
     display: none;
 }
 
+.modal p {
+    margin-bottom: 1.8em;
+}
+
+.modal .pure-form input[type="email"],
+.modal .pure-form input[type="text"] {
+    font-size: .9em;
+    font-family: 'FontAwesome', sans-serif;
+    padding: .8em 1em;
+    margin: 1em 0;
+}
+
 .ui-dialog {
     padding: 2em;
     background: #fff;

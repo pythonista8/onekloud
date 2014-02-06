@@ -59,13 +59,6 @@
     <link href="{% static 'css/onekloud/forms.css' %}" rel="stylesheet">
     <link href="{% static 'css/onekloud/messages.css' %}" rel="stylesheet">
 
-    {# Vendor JavaScript files. #}
-    <script src="{% static 'js/vendor/jquery/jquery-2.0.3.js' %}"></script>
-    <script src="{% static 'js/vendor/jquery/jquery-ui-1.10.3.js' %}"></script>
-
-    {# Onekloud JavaScript files. #}
-    <script src="{% static 'js/onekloud/lib.js' %}"></script>
-
     {# Inherited CSS files are included in `css` block. #}
     {% block css %}{% endblock %}
 
@@ -145,6 +138,14 @@
 
         {% include 'onekloud/footer.html' %}
     </div>
+
+    {# Vendor JavaScript files. #}
+    <script src="{% static 'js/vendor/jquery/jquery-2.0.3.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery/jquery-ui-1.10.3.js' %}"></script>
+
+    {# Onekloud JavaScript files. #}
+    <script src="{% static 'js/onekloud/lib.js' %}"></script>
+    <script src="{% static 'js/onekloud/load.js' %}"></script>
 
     {# JavaScript testing. #}
     {% if debug %}
