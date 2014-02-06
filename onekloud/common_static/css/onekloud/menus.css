@@ -17,6 +17,11 @@
     background: #eee;
 }
 
+#menu .pure-menu.pure-menu-open,
+#menu .pure-menu.pure-menu-horizontal li .pure-menu-children {
+    background: transparent;
+}
+
 
 /* --------------------------
  * Responsive Styles
