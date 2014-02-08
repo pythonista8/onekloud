@@ -232,10 +232,18 @@ h3, h4, h5, h6 {
     #content {
         margin-bottom: 0;
     }
+
+    .ui-dialog {
+        width: 300px !important;
+    }
 }
 
 @media (max-width: 420px) {
     #logo {
         display: none;
+    }
+
+    .ui-dialog {
+        width: 200px !important;
     }
 }
