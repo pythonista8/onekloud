@@ -10,8 +10,6 @@ from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
 from apps.pages.forms import SignupForm, ContactForm
 
-SUPPORT_EMAIL = 'support@onekloud.com'
-
 
 def home(request):
     ctx = dict()
@@ -22,17 +20,17 @@ def home(request):
             subject = "Free trial activation for Onekloud CRM"
             data = form.cleaned_data
             # With this hash we will check if passed data is valid.
-            key = '{key}{email}{company}'.format(
+            key = '{key}{email}{phone}{company}'.format(
                 key=settings.ACTIVATION_SALT, email=data['email'],
-                company=data['company']).encode('utf8')
+                phone=data['phone'], company=data['company']).encode('utf8')
             data['key'] = hashlib.md5(key).hexdigest()
 
             encdata = urllib.parse.urlencode(data)
             html = mark_safe(render_to_string('pages/activation_email.html',
                                               dict(params=encdata)))
             msg = EmailMessage(
-                subject, html, SUPPORT_EMAIL, [data['email']],
-                headers={'Reply-To': SUPPORT_EMAIL})
+                subject, html, settings.SUPPORT_EMAIL, [data['email']],
+                headers={'Reply-To': settings.SUPPORT_EMAIL})
             msg.content_subtype = 'html'
             try:
                 msg.send(fail_silently=False)
@@ -67,7 +65,8 @@ def pricing(request):
 
             html = mark_safe(render_to_string('pages/email.html', data))
             recipients = ('aldash@onekloud.com', 'samantha@onekloud.com')
-            msg = EmailMessage(subject, html, SUPPORT_EMAIL, recipients)
+            msg = EmailMessage(subject, html, settings.SUPPORT_EMAIL, 
+                               recipients)
             msg.content_subtype = 'html'
             msg.send()
             messages.success(
@@ -90,8 +89,8 @@ def pricing(request):
                     render_to_string('pages/activation_email.html',
                                      dict(params=encdata)))
                 msg = EmailMessage(
-                    subject, html, SUPPORT_EMAIL, [data['email']],
-                    headers={'Reply-To': SUPPORT_EMAIL})
+                    subject, html, settings.SUPPORT_EMAIL, [data['email']],
+                    headers={'Reply-To': settings.SUPPORT_EMAIL})
                 msg.content_subtype = 'html'
                 msg.send()
                 messages.success(
