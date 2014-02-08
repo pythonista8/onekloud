@@ -67,13 +67,9 @@
 </head>
 
 <body>
-    <a href="#menu" id="menu-link" class="pure-menu-link">
-        <span></span>
-    </a>
-
     <header id="header">
         <div class="wrap">
-            <div class="pure-g-r">
+            <div class="pure-g">
                 <div class="pure-u-1-5">
                     <div id="logo">
                         <div class="l-box">
@@ -84,34 +80,7 @@
                     </div>
                 </div>
 
-                <div id="menu" class="pure-u-4-5">
-                    <div class="pure-g">
-                        <div class="pure-u-5-6">
-                            <div class="l-box">
-                                <div class="pure-menu pure-menu-open pure-menu-horizontal">
-                                    <ul>
-                                        <li class="{% block menu-home %}{% endblock %}">
-                                            <a href="/">Home</a>
-                                        </li>
-                                        <li class="{% block menu-pricing %}{% endblock %}">
-                                            <a href="{% url 'pages:pricing' %}">Pricing</a>
-                                        </li>
-                                        <li class="{% block menu-contact %}{% endblock %}">
-                                            <a href="{% url 'pages:contact' %}">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pure-u-1-6">
-                            <div class="l-box">
-                                <a href="https://crm.onekloud.com" class="pure-button pure-button-primary pull-right">
-                                    Sign In
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% include 'onekloud/menu.html' %}
             </div>
         </div>
     </header>

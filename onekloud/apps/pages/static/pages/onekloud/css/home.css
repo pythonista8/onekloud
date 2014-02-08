@@ -119,3 +119,27 @@
 #signup p {
     margin-bottom: 1.8em;
 }
+
+/* Responsive queries */
+
+@media (max-width: 767px) {
+    #showcase {
+        padding: 1em 0 3em;
+    }
+
+    #content {
+        margin-bottom: 0;
+    }
+
+    .section {
+        padding: 1em 0;
+    }
+
+    .section .heading {
+        margin-bottom: 0;
+    }
+
+    .section p {
+        margin-top: .7em;
+    }
+}

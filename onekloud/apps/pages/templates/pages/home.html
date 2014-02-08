@@ -12,8 +12,8 @@
 {% block showcase %}
 <div class="fade"></div>
 
-<div id="showcase" class="pure-g-r pure-hidden-phone"
-     style="background-image: url({% static 'pages/onekloud/img/showcase.jpg' %})">
+<div style="background-image: url({% static 'pages/onekloud/img/showcase.jpg' %})"
+     id="showcase" class="pure-g-r">
     <div class="pure-u-1">
         <div class="wrap">
             <div class="pure-g-r">
@@ -86,7 +86,7 @@
             </h2>
             <div class="pure-g-r">
                 <div class="pure-u-1-2">
-                    <div class="l-box">
+                    <div class="l-box pure-hidden-phone">
                         <img src="{% static 'pages/onekloud/img/easy-to-use.png' %}"
                              alt="Easy to Use">
                     </div>
@@ -135,7 +135,7 @@
     </div>
 </section>
 
-<section id="signup" class="section center">
+<section id="signup" class="section center pure-hidden-phone">
     <div class="l-box wrap">
         <h2 class="heading">Free Trial</h2>
         <p>
@@ -149,7 +149,7 @@
     </div>
 </section>
 
-{% include 'onekloud/partials/signup_form_modal.html' %}
+{% include 'onekloud/modals/signup_form.html' %}
 
 {% endblock %}
 

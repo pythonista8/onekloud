@@ -213,3 +213,25 @@ h3, h4, h5, h6 {
     text-align: right;
     padding: 5px 20px;
 }
+
+
+/* --------------------------
+ * Responsive Styles
+ * --------------------------
+*/
+
+@media (max-width: 767px) {
+    #logo {
+        padding-top: .4em;
+    }
+
+    #logo img {
+        max-width: 130px;
+    }
+}
+
+@media (max-width: 420px) {
+    #logo {
+        display: none;
+    }
+}
