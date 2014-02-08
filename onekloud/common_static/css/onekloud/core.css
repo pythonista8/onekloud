@@ -228,6 +228,10 @@ h3, h4, h5, h6 {
     #logo img {
         max-width: 130px;
     }
+
+    #content {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 420px) {

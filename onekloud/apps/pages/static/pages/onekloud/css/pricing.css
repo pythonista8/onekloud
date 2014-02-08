@@ -63,3 +63,19 @@
     -o-box-shadow: 0 0 10px rgba(0,0,0,.05);
     -ms-box-shadow: 0 0 10px rgba(0,0,0,.05);
 }
+
+
+/* --------------------------
+ * Responsive Styles
+ * --------------------------
+*/
+
+@media (max-width: 767px) {
+    #pricing-section {
+        margin-top: 2em;
+    }
+
+    .featured {
+        bottom: 0;
+    }
+}
