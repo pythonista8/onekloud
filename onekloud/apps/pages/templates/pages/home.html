@@ -12,8 +12,8 @@
 {% block showcase %}
 <div class="fade"></div>
 
-<div id="showcase" class="pure-g-r pure-hidden-phone"
-     style="background-image: url({% static 'pages/onekloud/img/showcase.jpg' %})">
+<div style="background-image: url({% static 'pages/onekloud/img/showcase.jpg' %})"
+     id="showcase" class="pure-g-r">
     <div class="pure-u-1">
         <div class="wrap">
             <div class="pure-g-r">
@@ -32,13 +32,14 @@
                         </a>
                     </div>
                 </div>
-                <div id="signup-form-container" class="pure-u-1-3">
+                <div class="pure-u-1-3">
                     <div class="l-box">
                         <h2>Sign up for 15-days Trial. It's free!</h2>
-                        <form class="pure-form pure-form-stacked" method="post">
+                        <form class="pure-form pure-form-stacked" method="post" autocomplete="off">
                             {% csrf_token %}
                             <input type="email" name="email" placeholder="&#xf0e0;  Your email" required>
-                            <input type="text" name="company" placeholder="&#xf0b1;  Your company name" autocomplete="off" required>
+                            <input type="text" name="phone" placeholder="&#xf095;  Your phone number" required>
+                            <input type="text" name="company" placeholder="&#xf0b1;  Your company name" required>
                             <input type="submit" value="Sign Up" class="pure-button pure-button-xlarge pure-button-success">
                         </form>
                     </div>
@@ -86,7 +87,7 @@
             </h2>
             <div class="pure-g-r">
                 <div class="pure-u-1-2">
-                    <div class="l-box">
+                    <div class="l-box pure-hidden-phone">
                         <img src="{% static 'pages/onekloud/img/easy-to-use.png' %}"
                              alt="Easy to Use">
                     </div>
@@ -135,7 +136,7 @@
     </div>
 </section>
 
-<section id="signup" class="section center">
+<section id="signup" class="section center pure-hidden-phone">
     <div class="l-box wrap">
         <h2 class="heading">Free Trial</h2>
         <p>
@@ -143,11 +144,14 @@
             <br>
             a wonderful journey with Onekloud CRM.
         </p>
-        <a href="#" class="pure-button pure-button-xlarge pure-button-primary pure-hidden-phone">
+        <a href="#" class="pure-button pure-button-xlarge pure-button-primary signup">
             Sign Up
         </a>
     </div>
 </section>
+
+{% include 'onekloud/modals/signup_form.html' %}
+
 {% endblock %}
 
 {% block menu-home %}

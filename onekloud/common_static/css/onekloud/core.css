@@ -135,6 +135,18 @@ h3, h4, h5, h6 {
     display: none;
 }
 
+.modal p {
+    margin-bottom: 1.8em;
+}
+
+.modal .pure-form input[type="email"],
+.modal .pure-form input[type="text"] {
+    font-size: .9em;
+    font-family: 'FontAwesome', sans-serif;
+    padding: .8em 1em;
+    margin: 1em 0;
+}
+
 .ui-dialog {
     padding: 2em;
     background: #fff;
@@ -200,4 +212,38 @@ h3, h4, h5, h6 {
 #copyright {
     text-align: right;
     padding: 5px 20px;
+}
+
+
+/* --------------------------
+ * Responsive Styles
+ * --------------------------
+*/
+
+@media (max-width: 767px) {
+    #logo {
+        padding-top: .4em;
+    }
+
+    #logo img {
+        max-width: 130px;
+    }
+
+    #content {
+        margin-bottom: 0;
+    }
+
+    .ui-dialog {
+        width: 300px !important;
+    }
+}
+
+@media (max-width: 420px) {
+    #logo {
+        display: none;
+    }
+
+    .ui-dialog {
+        width: 200px !important;
+    }
 }

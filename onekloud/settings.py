@@ -40,8 +40,10 @@ ALLOWED_HOSTS = [
 
 AUTH_USER_MODEL = 'accounts.User'
 
+SUPPORT_EMAIL = 'support@onekloud.com'
+
 ADMINS = (
-    ('Aldash Biybosunov', 'support@onekloud.com'),
+    ('Aldash Biybosunov', SUPPORT_EMAIL),
 )
 
 

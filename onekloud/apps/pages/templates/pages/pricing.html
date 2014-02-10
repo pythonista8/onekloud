@@ -157,20 +157,8 @@
 </div>
 {# End Modal. #}
 
-{# Modal - Sign Up form #}
-<div id="signup-form-modal" class="modal">
-    <p>
-        Fill in the fields below to get your <b>free 15-days</b> Trial version.
-    </p>
-    <form class="pure-form pure-form-stacked" method="post">
-        {% csrf_token %}
-        <input type="email" name="email" class="pure-input-1" placeholder="&#xf0e0;  Your email" required>
-        <input type="text" name="company" class="pure-input-1" placeholder="&#xf0b1;  Company name" autocomplete="off" required>
-        <input type="submit" class="pure-button pure-button-primary pull-right" value="Sign Up">
-        <div class="clearfix"></div>
-    </form>
-</div>
-{# End Modal. #}
+{% include 'onekloud/modals/signup_form.html' %}
+
 {% endblock %}
 
 {% block menu-pricing %}

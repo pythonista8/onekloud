@@ -64,16 +64,22 @@
     -ms-box-shadow: 0 0 10px rgba(0,0,0,.05);
 }
 
-/* Modal forms */
 
-.modal p {
-    margin-bottom: 1.8em;
-}
+/* --------------------------
+ * Responsive Styles
+ * --------------------------
+*/
 
-.modal .pure-form input[type="email"],
-.modal .pure-form input[type="text"] {
-    font-size: .9em;
-    font-family: 'FontAwesome', sans-serif;
-    padding: .8em 1em;
-    margin: 1em 0;
+@media (max-width: 767px) {
+    #pricing-section {
+        margin-top: 2em;
+    }
+
+    .pricing-box {
+        margin-bottom: 1em;
+    }
+
+    .featured {
+        bottom: 0;
+    }
 }

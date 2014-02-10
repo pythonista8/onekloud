@@ -54,17 +54,10 @@
 
     {# OneKloud CSS files. #}
     <link href="{% static 'css/onekloud/core.css' %}" rel="stylesheet">
-    <link href="{% static 'css/onekloud/menu.css' %}" rel="stylesheet">
+    <link href="{% static 'css/onekloud/menus.css' %}" rel="stylesheet">
     <link href="{% static 'css/onekloud/buttons.css' %}" rel="stylesheet">
     <link href="{% static 'css/onekloud/forms.css' %}" rel="stylesheet">
     <link href="{% static 'css/onekloud/messages.css' %}" rel="stylesheet">
-
-    {# Vendor JavaScript files. #}
-    <script src="{% static 'js/vendor/jquery/jquery-2.0.3.js' %}"></script>
-    <script src="{% static 'js/vendor/jquery/jquery-ui-1.10.3.js' %}"></script>
-
-    {# Onekloud JavaScript files. #}
-    <script src="{% static 'js/onekloud/lib.js' %}"></script>
 
     {# Inherited CSS files are included in `css` block. #}
     {% block css %}{% endblock %}
@@ -74,13 +67,9 @@
 </head>
 
 <body>
-    <a href="#menu" id="menu-link" class="pure-menu-link">
-        <span></span>
-    </a>
-
     <header id="header">
         <div class="wrap">
-            <div class="pure-g-r">
+            <div class="pure-g">
                 <div class="pure-u-1-5">
                     <div id="logo">
                         <div class="l-box">
@@ -91,34 +80,7 @@
                     </div>
                 </div>
 
-                <div id="menu" class="pure-u-4-5">
-                    <div class="pure-g">
-                        <div class="pure-u-5-6">
-                            <div class="l-box">
-                                <div class="pure-menu pure-menu-open pure-menu-horizontal">
-                                    <ul>
-                                        <li class="{% block menu-home %}{% endblock %}">
-                                            <a href="/">Home</a>
-                                        </li>
-                                        <li class="{% block menu-pricing %}{% endblock %}">
-                                            <a href="{% url 'pages:pricing' %}">Pricing</a>
-                                        </li>
-                                        <li class="{% block menu-contact %}{% endblock %}">
-                                            <a href="{% url 'pages:contact' %}">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pure-u-1-6">
-                            <div class="l-box">
-                                <a href="https://crm.onekloud.com" class="pure-button pure-button-primary pull-right">
-                                    Sign In
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% include 'onekloud/menu.html' %}
             </div>
         </div>
     </header>
@@ -145,6 +107,14 @@
 
         {% include 'onekloud/footer.html' %}
     </div>
+
+    {# Vendor JavaScript files. #}
+    <script src="{% static 'js/vendor/jquery/jquery-2.0.3.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery/jquery-ui-1.10.3.js' %}"></script>
+
+    {# Onekloud JavaScript files. #}
+    <script src="{% static 'js/onekloud/lib.js' %}"></script>
+    <script src="{% static 'js/onekloud/load.js' %}"></script>
 
     {# JavaScript testing. #}
     {% if debug %}
