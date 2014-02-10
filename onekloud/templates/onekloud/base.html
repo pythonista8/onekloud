@@ -12,10 +12,13 @@
     {# Marketing meta information. #}
     <meta name="keywords" content="crm, crm software, crm online, sales management">
 
+    {# Inherited meta information is included in `meta` block. #}
+    {% block meta %}{% endblock %}
+
     <meta property="og:title" content="Onekloud • Achieving dreams without obstacles.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{% static 'img/onekloud/logo.png' %}">
-    <meta property="og:url" content="//www.onekloud.com/">
+    <meta property="og:url" content="http://www.onekloud.com/">
     <meta property="og:description" content="Online customer relationship management system that encourages simplicity. Free 15-Days Trial.">
     <meta property="fb:admins" content="100001028419487">
 
@@ -23,9 +26,6 @@
     <meta property="twitter:title" content="Onekloud • Achieving dreams without obstacles.">
     <meta property="twitter:description" content="Online customer relationship management system that encourages simplicity. Free 15-Days Trial.">
     <meta property="twitter:image" content="{% static 'img/onekloud/logo.png' %}">
-
-    {# Inherited meta information is included in `meta` block. #}
-    {% block meta %}{% endblock %}
 
     {% if title %}
         <title>{{ title }} • Onekloud</title>
