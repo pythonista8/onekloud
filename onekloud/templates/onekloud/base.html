@@ -66,6 +66,12 @@
 
     {# Extra files, such as old IE versions support. #}
     {% block head %}{% endblock %}
+
+    {# HTML5 support in older IE browsers. #}
+    <!--[if lt IE 9]>
+    <script src="{% static 'js/vendor/html5shiv/html5shiv.js' %}"></script>
+    <script src="{% static 'js/vendor/html5shiv/html5shiv-printshiv.js' %}"></script>
+    <![endif]-->
 </head>
 
 <body>

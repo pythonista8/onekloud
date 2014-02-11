@@ -65,7 +65,7 @@ def pricing(request):
 
             html = mark_safe(render_to_string('pages/email.html', data))
             recipients = ('aldash@onekloud.com', 'samantha@onekloud.com')
-            msg = EmailMessage(subject, html, settings.SUPPORT_EMAIL, 
+            msg = EmailMessage(subject, html, settings.SUPPORT_EMAIL,
                                recipients)
             msg.content_subtype = 'html'
             msg.send()
@@ -139,3 +139,12 @@ def refund(request):
 def terms_of_service(request):
     ctx = dict(title="Terms of Service")
     return render(request, 'pages/terms_of_service.html', ctx)
+
+
+def investors(request):
+    return render(request, 'pages/investors.html')
+
+
+def presentation(request):
+    ctx = dict(title="Presentation")
+    return render(request, 'pages/presentation.html', ctx)

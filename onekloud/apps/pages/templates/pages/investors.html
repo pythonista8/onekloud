@@ -1,0 +1,19 @@
+{% extends 'onekloud/base.html' %}
+{% load static %}
+
+{% block css %}
+<link href="{% static 'pages/onekloud/css/flat.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="pure-g-r wrap">
+    <div class="pure-u-1">
+        <div class="l-box">
+            <h1>Investors</h1>
+            <p>
+                Hey! <a href="{% url 'pages:presentation' %}">Check it out</a>.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

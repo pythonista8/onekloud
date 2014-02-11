@@ -1,0 +1,50 @@
+<!doctype html>
+{% load static %}
+
+<html lang="en">
+<head>
+    {# Meta information #}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Presentation • Onekloud</title>
+
+    <link rel="icon" href="{% static 'img/onekloud/favicon.ico' %}" type="image/x-icon">
+
+    {# Vendor CSS files. #}
+    <link href="{% static 'pages/vendor/revealjs/css/reveal.css' %}" rel="stylesheet">
+    <link href="{% static 'pages/vendor/revealjs/css/default.css' %}" rel="stylesheet">
+
+    {# HTML5 support in older IE browsers. #}
+    <!--[if lt IE 9]>
+    <script src="{% static 'js/vendor/html5shiv/html5shiv.js' %}"></script>
+    <script src="{% static 'js/vendor/html5shiv/html5shiv-printshiv.js' %}"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background="#007777">
+                <h1>Onekloud CRM</h1>
+                <p>
+                    Online Customer Relationship Management system
+                    <br>
+                    that encourages simplicity.
+                </p>
+            </section>
+            <section data-background="#007777">
+                <h2>Why CRM?</h2>
+                <p>
+                    Because...
+                </p>
+            </section>
+        </div>
+    </div>
+
+    {# RevealJS #}
+    <script src="{% static 'pages/vendor/revealjs/js/reveal.js' %}"></script>
+    <script src="{% static 'pages/onekloud/js/investors.js' %}"></script>
+</body>
+</html>
