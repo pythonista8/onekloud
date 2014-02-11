@@ -11,14 +11,15 @@
 
 #showcase .heading {
     color: #fff;
-    font: normal 4.5em/1 'Lato', sans-serif;
+    font: normal 4.5em/1 'Open Sans', sans-serif;
+    letter-spacing: -4px;
     margin: .3em 0;
-    letter-spacing: -3px;
 }
 
 #showcase .subheading {
-    font-size: 1.8em;
+    font-size: 1.75em;
     line-height: 1.4em;
+    letter-spacing: -1px;
     margin: 0 0 1.5em;
 }
 
@@ -30,7 +31,8 @@
 
 #showcase h2 {
     color: #fff;
-    font-size: 1.6em;
+    font: normal 1.6em 'Open Sans', sans-serif;
+    letter-spacing: -1px;
     margin: 0 0 1.15em;
 }
 
