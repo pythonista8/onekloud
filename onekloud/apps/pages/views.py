@@ -141,10 +141,6 @@ def terms_of_service(request):
     return render(request, 'pages/terms_of_service.html', ctx)
 
 
-def investors(request):
-    return render(request, 'pages/investors.html')
-
-
 def presentation(request):
     ctx = dict(title="Presentation")
     return render(request, 'pages/presentation.html', ctx)

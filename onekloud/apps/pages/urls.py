@@ -27,11 +27,7 @@ urlpatterns = patterns(
         'terms_of_service',
         name='terms_of_service'),
 
-    url(r'^investors/$',
-        'investors',
-        name='investors'),
-
-    url(r'^investors/presentation/$',
+    url(r'^presentation/$',
         'presentation',
         name='presentation'),
 )
