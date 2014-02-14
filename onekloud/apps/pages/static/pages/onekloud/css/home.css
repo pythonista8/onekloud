@@ -70,27 +70,6 @@
     z-index: 10;
 }
 
-/* Marketing section */
-
-#marketing-section p {
-    font-size: .9em;
-}
-
-#marketing-section .l-box {
-    padding: 2em;
-}
-
-#marketing-section .icon {
-    font-size: 3.3em;
-}
-
-#marketing-section .heading {
-    font-size: 1.85em;
-    letter-spacing: -1px;
-    margin: .5em 0 0;
-    -webkit-font-smoothing: antialiased;
-}
-
 /* Feature section */
 
 .section {
@@ -103,7 +82,7 @@
 }
 
 .section .heading {
-    font-size: 2.3em;
+    font-size: 2.7em;
     text-align: center;
     margin: 0 0 1.1em;
 }
