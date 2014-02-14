@@ -83,6 +83,7 @@
 
 .section .heading {
     font: normal 2.8em 'Open Sans', sans-serif;
+    letter-spacing: -1px;
     text-align: center;
     margin: 0 0 1.1em;
 }
