@@ -1,4 +1,5 @@
 import hashlib
+import logging
 import urllib.parse
 
 from smtplib import SMTPException
@@ -12,6 +13,7 @@ from apps.pages.forms import SignupForm, ContactForm
 
 
 def home(request):
+    logger = logging.getLogger(__name__)
     ctx = dict()
     if request.method == 'POST':
         form = SignupForm(request.POST)
@@ -34,9 +36,10 @@ def home(request):
             msg.content_subtype = 'html'
             try:
                 msg.send(fail_silently=False)
-            except SMTPException:
+            except SMTPException as e:
                 # Fallback: immediately authorize for Trial with no email
                 # notification.
+                logger.error(e)
                 url = 'https://crm.onekloud.com/auth/activate-trial/'
                 full_url = '{url}?{params}'.format(url=url, params=encdata)
                 return redirect(full_url)
