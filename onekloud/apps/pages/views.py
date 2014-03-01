@@ -147,3 +147,8 @@ def terms_of_service(request):
 def presentation(request):
     ctx = dict(title="Presentation")
     return render(request, 'pages/presentation.html', ctx)
+
+
+def thankyou(request):
+    ctx = dict(title="Thank You")
+    return render(request, 'pages/thankyou.html', ctx)
