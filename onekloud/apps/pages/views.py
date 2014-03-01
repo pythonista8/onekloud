@@ -10,6 +10,7 @@ from django.core.mail import EmailMessage
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
+from django.views.decorators.csrf import csrf_exempt
 from apps.pages.forms import SignupForm, ContactForm
 
 
@@ -150,11 +151,14 @@ def presentation(request):
     return render(request, 'pages/presentation.html', ctx)
 
 
+@csrf_exempt
 def thankyou(request):
-    ctx = dict(title="Thank You")
-    # Make sure user is redirected from 2checkout.com.
-    http_referer = request.META.pop('HTTP_REFERER', '')
-    if '.2checkout.com' not in http_referer:
-        return http.HttpResponseForbidden()
+    if request.method == 'POST':    
+        ctx = dict(title="Thank You")
+        # Make sure user is redirected from 2checkout.com.
+        http_referer = request.META.pop('HTTP_REFERER', '')
+        if '.2checkout.com' not in http_referer:
+            return http.HttpResponseForbidden()
+        return render(request, 'pages/thankyou.html', ctx)
 
-    return render(request, 'pages/thankyou.html', ctx)
+    return http.HttpResponseNotAllowed(['GET'])
