@@ -155,12 +155,7 @@ def presentation(request):
 def thankyou(request):
     if request.method == 'POST':    
         ctx = dict(title="Thank You")
-        # Make sure user is redirected from 2checkout.com.
-        http_referer = request.META.pop('HTTP_REFERER', '')
-        ctx['http_referer'] = http_referer
-        ctx['post'] = request.POST
-        # if '.2checkout.com' not in http_referer:
-        #     return http.HttpResponseForbidden()
+        ctx['data'] = request.POST  # customer data from 2checkout.com
         return render(request, 'pages/thankyou.html', ctx)
 
     return http.HttpResponseNotAllowed(['GET'])
