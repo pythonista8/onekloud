@@ -3,6 +3,7 @@ import logging
 import urllib.parse
 
 from smtplib import SMTPException
+from django import http
 from django.conf import settings
 from django.contrib import messages
 from django.core.mail import EmailMessage
@@ -40,7 +41,7 @@ def home(request):
                 # Fallback: immediately authorize for Trial with no email
                 # notification.
                 logger.error(e)
-                url = 'https://crm.onekloud.com/auth/activate-trial/'
+                url = 'https://crm.onekloud.com/auth/try/'
                 full_url = '{url}?{params}'.format(url=url, params=encdata)
                 return redirect(full_url)
             else:
@@ -151,4 +152,9 @@ def presentation(request):
 
 def thankyou(request):
     ctx = dict(title="Thank You")
+    # Make sure user is redirected from 2checkout.com.
+    http_referer = request.META.pop('HTTP_REFERER', '')
+    if '.2checkout.com' not in http_referer:
+        return http.HttpResponseForbidden()
+
     return render(request, 'pages/thankyou.html', ctx)
