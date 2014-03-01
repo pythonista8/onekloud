@@ -149,13 +149,3 @@ def terms_of_service(request):
 def presentation(request):
     ctx = dict(title="Presentation")
     return render(request, 'pages/presentation.html', ctx)
-
-
-@csrf_exempt
-def thankyou(request):
-    if request.method == 'POST':    
-        ctx = dict(title="Thank You")
-        ctx['data'] = request.POST  # customer data from 2checkout.com
-        return render(request, 'pages/thankyou.html', ctx)
-
-    return http.HttpResponseNotAllowed(['GET'])

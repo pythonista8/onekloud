@@ -30,8 +30,4 @@ urlpatterns = patterns(
     url(r'^presentation/$',
         'presentation',
         name='presentation'),
-
-    url(r'^thankyou/$',
-        'thankyou',
-        name='thankyou'),
 )
