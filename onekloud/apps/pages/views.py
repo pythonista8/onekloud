@@ -157,8 +157,10 @@ def thankyou(request):
         ctx = dict(title="Thank You")
         # Make sure user is redirected from 2checkout.com.
         http_referer = request.META.pop('HTTP_REFERER', '')
-        if '.2checkout.com' not in http_referer:
-            return http.HttpResponseForbidden()
+        ctx['http_referer'] = http_referer
+        ctx['post'] = request.POST
+        # if '.2checkout.com' not in http_referer:
+        #     return http.HttpResponseForbidden()
         return render(request, 'pages/thankyou.html', ctx)
 
     return http.HttpResponseNotAllowed(['GET'])
